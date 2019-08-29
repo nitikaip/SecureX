@@ -19,7 +19,7 @@ def Notify():
     msg = 'Meraki LINE Notify'
     r = requests.post(url, headers=headers, data = {'message':msg})
     return ("Complete")
-
+"""
 @app.route("/", methods=['POST'])
 def NotifyPost():
     msg = 'Meraki LINE Notify'
@@ -28,6 +28,15 @@ def NotifyPost():
     dict = request.form
     for key in dict:
         return ('form key '+dict[key])
+"""
+
+@app.route("/", methods=['POST'])
+def NotifyPost():
+    msg = 'Meraki LINE Notify\n'   
+    dict = request.form
+    for key in dict:
+        text =  text + dict[key]
+    r = requests.post(url, headers=headers, data = {'message':text})
     
 if __name__ == "__main__":
   app.run(host='0.0.0.0',port=os.environ['PORT'])

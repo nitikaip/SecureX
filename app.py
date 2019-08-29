@@ -7,6 +7,7 @@ import requests
 
 from flask import Flask, request, abort
 
+app = Flask('Line')
 
 url = 'https://notify-api.line.me/api/notify'
 token = 'WtqN6srzyc7SyGNSLDhlTlUJqrAhDiUfUYaUnJQ6CrW'

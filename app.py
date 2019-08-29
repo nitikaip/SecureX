@@ -13,14 +13,11 @@ url = 'https://notify-api.line.me/api/notify'
 token = 'WtqN6srzyc7SyGNSLDhlTlUJqrAhDiUfUYaUnJQ6CrW'
 headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'Bearer '+token}
 
-msg = 'Meraki LINE Notify'
-r = requests.post(url, headers=headers, data = {'message':msg})
-
 #@app.route("/", methods=['POST'])
 @app.route("/")
 def Notify():
     msg = 'Meraki LINE Notify'
-    r = requests.post(url, headers=headers, data = {'message':request.form})
+    r = requests.post(url, headers=headers, data = {'message':msg})
     return ("Complete")
 
 if __name__ == "__main__":

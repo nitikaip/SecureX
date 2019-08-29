@@ -18,6 +18,8 @@ r = requests.post(url, headers=headers, data = {'message':msg})
 
 @app.route('/')       #เป็น path ที่ต้องการให้เรียกใช้นะครับ
 def hello():
+    msg = 'Meraki LINE Notify'
+    r = requests.post(url, headers=headers, data = {'message':msg})
     return 'Hello World'  #ส่วนที่ต้องการแสดงผลออกไป
 
 if __name__ == "__main__":

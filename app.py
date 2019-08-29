@@ -17,10 +17,10 @@ msg = 'Meraki LINE Notify'
 r = requests.post(url, headers=headers, data = {'message':msg})
 
 @app.route("/", methods=['POST'])
-#@app.route("/")
-def hello():
-    msg = 'Meraki LINE Notify'
-    r = requests.post(url, headers=headers, data = {'message':request.form})
+    #@app.route("/")
+    def hello():
+        msg = 'Meraki LINE Notify'
+        r = requests.post(url, headers=headers, data = {'message':request.form})
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0',port=os.environ['PORT'])

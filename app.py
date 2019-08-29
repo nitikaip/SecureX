@@ -3,8 +3,6 @@
 import datetime
 import errno
 import os
-import sys
-import tempfile
 import requests
 
 from flask import Flask, request, abort

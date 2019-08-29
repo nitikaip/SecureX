@@ -16,7 +16,7 @@ headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'B
 msg = 'Meraki LINE Notify'
 r = requests.post(url, headers=headers, data = {'message':msg})
 
-@app.route('/')       #เป็น path ที่ต้องการให้เรียกใช้นะครับ
+@app.route("/", methods=['POST'])
 def hello():
     msg = 'Meraki LINE Notify'
     r = requests.post(url, headers=headers, data = {'message':msg})

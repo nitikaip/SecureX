@@ -16,11 +16,12 @@ headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'B
 msg = 'Meraki LINE Notify'
 r = requests.post(url, headers=headers, data = {'message':msg})
 
-@app.route("/", methods=['POST'])
-    #@app.route("/")
-    def hello():
-        msg = 'Meraki LINE Notify'
-        r = requests.post(url, headers=headers, data = {'message':request.form})
+#@app.route("/", methods=['POST'])
+@app.route("/")
+def Notify():
+    msg = 'Meraki LINE Notify'
+    r = requests.post(url, headers=headers, data = {'message':request.form})
+    return ("Complete")
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0',port=os.environ['PORT'])

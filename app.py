@@ -20,7 +20,8 @@ r = requests.post(url, headers=headers, data = {'message':msg})
 def hello():
     msg = 'Meraki LINE Notify'
     r = requests.post(url, headers=headers, data = {'message':msg})
-    return 'Hello World'  #ส่วนที่ต้องการแสดงผลออกไป
+    return (r)
+    #return 'Hello World'  #ส่วนที่ต้องการแสดงผลออกไป
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0',port=os.environ['PORT'])

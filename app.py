@@ -6,7 +6,6 @@ import os
 import sys
 import tempfile
 import requests
-import meraki
 
 from flask import Flask, request, abort
 

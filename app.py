@@ -21,14 +21,13 @@ def Notify():
     return ("Complete")
 
 @app.route("/", methods=['POST'])
-def Notify():
+def NotifyPost():
     msg = 'Meraki LINE Notify'
     r = requests.post(url, headers=headers, data = {'message':msg})
     return ("Complete")
     dict = request.form
     for key in dict:
         return ('form key '+dict[key])
-    
     
 if __name__ == "__main__":
   app.run(host='0.0.0.0',port=os.environ['PORT'])

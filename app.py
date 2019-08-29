@@ -15,6 +15,10 @@ headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'B
 msg = 'Meraki LINE Notify'
 r = requests.post(url, headers=headers, data = {'message':msg})
 
+@app.route('/')       #เป็น path ที่ต้องการให้เรียกใช้นะครับ
+def hello():
+    return 'Hello World'  #ส่วนที่ต้องการแสดงผลออกไป
+
 if __name__ == "__main__":
   app.run(host='0.0.0.0',port=os.environ['PORT'])
 

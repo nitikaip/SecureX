@@ -40,6 +40,7 @@ def NotifyPost():
     for key in dict:
         msg = msg + dict[key]
     r = requests.post(url, headers=headers, data = {'message':msg})
+    return(r)
     
 if __name__ == "__main__":
   app.run(host='0.0.0.0',port=os.environ['PORT'])

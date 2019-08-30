@@ -24,10 +24,10 @@ def Notify():
 @app.route("/", methods=['POST'])
 def NotifyPost():
     msg = 'Meraki LINE Notify with POST\n'   
-    msg = msg + str(request.form['alertData'])
+    msg = msg + str(request.form)
     
     print('P Start =====')
-    print(request.form)
+    print(request.form['alertId'])
     print('P Stop =====')
     
     r = requests.post(url, headers=headers, data = {'message':msg})

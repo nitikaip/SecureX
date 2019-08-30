@@ -27,7 +27,7 @@ def NotifyPost():
     msg = msg + str(request.form)
     
     print('P Start =====')
-    print(request.form)
+    print(msg)
     print('P Stop =====')
     
     r = requests.post(url, headers=headers, data = {'message':msg})

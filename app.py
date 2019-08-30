@@ -16,29 +16,13 @@ headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'B
 
 @app.route("/")
 def Notify():
-    msg = 'Meraki LINE Notify'
+    msg = 'Meraki LINE Notify No Post'
     r = requests.post(url, headers=headers, data = {'message':msg})
     return ("Complete")
 
-
-"""
 @app.route("/", methods=['POST'])
 def NotifyPost():
-    msg = 'Meraki LINE Notify'
-    r = requests.post(url, headers=headers, data = {'message':msg})
-    return ("Complete")
-    dict = request.form
-    for key in dict:
-        return ('form key '+dict[key])
-"""
-
-
-@app.route("/", methods=['POST'])
-def NotifyPost():
-    msg = 'Meraki LINE Notify\n'   
-    dict = request.form
-    for key in dict:
-        msg = msg + dict[key]
+    msg = 'Meraki LINE Notify with POST'   
     r = requests.post(url, headers=headers, data = {'message':msg})
     return(r)
     

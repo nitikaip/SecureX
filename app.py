@@ -25,9 +25,9 @@ def Notify():
 def NotifyPost():
     msg = 'Meraki LINE Notify with POST\n'   
     msg = msg + str(dict(request.form))   
-    dict = request.form
-    for key in dict:
-      print ('form key '+dict[key])
+    PT = request.form
+    for key in PT:
+      print ('form key '+ PT[key])
     print('P Start =====')
     print(msg)
     print('P Stop =====')

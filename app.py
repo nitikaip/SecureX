@@ -25,7 +25,7 @@ def Notify():
 def NotifyPost():
     msg = 'Meraki LINE Notify with POST\n'   
     print('P Start =====')
-    print(request.form)
+    print(str(request.form))
     print('P Stop =====')
     r = requests.post(url, headers=headers, data = {'message':msg})
     return(msg)

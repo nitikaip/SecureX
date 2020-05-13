@@ -11,7 +11,7 @@ from flask import Flask, request, abort
 app = Flask('Line')
 
 url = 'https://notify-api.line.me/api/notify'
-token = 'WtqN6srzyc7SyGNSLDhlTlUJqrAhDiUfUYaUnJQ6CrW'
+token = 'FdsZX6K2Kg6tinYVtgG872eLAs3vSPW5ZH7klySWWx7'
 headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'Bearer '+token}
 
 
